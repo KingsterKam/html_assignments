@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Demo</title>
+  </head>
+  <body>
+    <h1>Forms Demo</h1>
+    <button>Outside Form</button>
+    <form action="/tacos">
+      <button type="button">Don't Submit Form</button>
+      <p>
+        <!-- use of id and for in inputs in text and labels -->
+        <label for="username">Enter a Username:</label>
+        <input
+          type="text"
+          placeholder="username"
+          id="username"
+          name="username"
+        />
+      </p>
+      <p>
+        <!-- use of id and for in inputs in passwords and labels -->
+        <label for="password">Enter a Password</label>
+        <input
+          type="password"
+          placeholder="password"
+          id="password"
+          name="password"
+        />
+      </p>
+      <!-- Button that submits the form -->
+      <button>Middle</button>
+      <!-- label and input for color  -->
+      <p>
+        <label for="color">Enter a Color</label>
+        <input type="color" id="color" name="color" />
+      </p>
+      <!-- label and input for numbers, with minimum and maximum values, moving at an increment of 2 -->
+      <p>
+        <label for="number">Enter a Number</label>
+        <input
+          type="number"
+          placeholder="enter a number"
+          id="number"
+          name="num"
+          min="1"
+          max="100"
+          step="2"
+        />
+      </p>
+      <button>Submit</button>
+      <input type="submit" name="" id="" value="click me" />
+    </form>
+    <!-- use of forms to search stuff in reddit, google, and youtube -->
+    <h2>Hijacking Searches</h2>
+    <h3>Search Reddit</h3>
+    <form action="https://www.reddit.com/search/?">
+      <input type="text" name="q" id="" />
+      <button>Search Reddit</button>
+    </form>
+    <h3>Search Google</h3>
+    <form action="https://www.google.com/search?">
+      <input type="text" name="q" id="" />
+      <button>Search Google</button>
+    </form>
+    <h3>Search Youtube</h3>
+    <form action="https://www.youtube.com/results?">
+      <input type="text" name="search_query" id="" />
+      <button>Search Youtube</button>
+    </form>
+
+    <h2>More Inputs!</h2>
+    <form action="/birds">
+      <!-- use of checkbox input -->
+      <input type="checkbox" name="agree_tos" id="agree" />
+      <label for="agree">I agree to everything</label>
+      <button>Submit</button>
+      <!-- use of radio inputs -->
+      <p>
+        <label for="Lg">Large</label>
+        <input type="radio" name="size" id="Lg" value="Lg" />
+        <label for="Med">Medium</label>
+        <input type="radio" name="size" id="Med" value="Med" />
+        <label for="Sm">Small</label>
+        <input type="radio" name="size" id="Sm" value="Sm" />
+      </p>
+      <!-- use of select values and options -->
+      <p>
+        <label for="meal">Please Select an Entree</label>
+        <select name="meal" id="meal">
+          <option value="fish">Fish</option>
+          <option value="veg" selected>Vegetarian</option>
+          <option value="steak">Steak</option>
+        </select>
+      </p>
+      <!-- use of range input -->
+      <p>
+        <label for="cheese">Amount of Cheese</label>
+        <input
+          type="range"
+          name="cheese_level"
+          id="cheese"
+          min="1"
+          max="100"
+          value="75"
+          step="7"
+        />
+      </p>
+      <!-- use of text boxes -->
+      <p>
+        <label for="requests">Any Special Requests?</label>
+        <br />
+        <textarea
+          name="Requests?"
+          id="requests"
+          rows="10"
+          cols="40"
+          placeholder="Type Something Here"
+        ></textarea>
+      </p>
+    </form>
+    <h2>Validations Demo</h2>
+    <!-- use of validations -->
+    <form action="/dummy">
+      <!-- required validation -->
+      <label for="first">Enter First Name</label>
+      <input type="text" name="first" id="first" required />
+      <p>
+        <!-- length validation -->
+        <label for="username">Username</label>
+        <input
+          type="text"
+          name="username"
+          id="username"
+          minlength="5"
+          maxlength="20"
+          required
+        />
+      </p>
+      <p>
+        <!-- email validation -->
+        <input type="email" name="" id="" required />
+        <!-- url validation -->
+        <input type="url" />
+      </p>
+      <button>Submit</button>
+    </form>
+  </body>
+</html>
